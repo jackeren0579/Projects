@@ -1,0 +1,88 @@
+﻿@model StudentsSubjectsViewModel
+
+@if (Model.Subject.SubjectID == 0) {
+    <h1>Opret fag</h1>
+}
+else {
+    <h1>Rediger fag</h1>
+}
+
+@TempData["updateMessage"]
+<br/>
+
+<a class="btn btn-primary" asp-action="Index">Tilbage</a>
+
+<br />
+<br />
+<div asp-validation-summary="All">
+    <form asp-action="EditSubject" method="post">
+        <input type="hidden" name="Subject.SubjectID" value="@Model.Subject.SubjectID" />
+
+        <label>Navn: </label><input asp-for="Subject.Name" value="@Model.Subject.Name" />
+        @if (Model.Subject.SubjectID == 0) {
+    <input type="submit" value="Opret" />
+        }
+        else {
+    <button class="btn btn-primary" type="submit">Opdater navn</button>
+        }
+        
+    </form>
+</div>
+
+@if(Model.Subject.SubjectID != 0) {
+<div>
+    <table class="table table-sm table-bordered table-hover table-striped" > 
+        <thead>
+            <tr>
+                <th colspan="3" class="text-center">Tilføjet til fag</th>
+            </tr>
+            <tr>
+                <th style="width: 300px">Navn</th>
+                <th style="width: 200px">Email</th>
+            </tr>
+        </thead>
+        <tbody>
+            @foreach (var s in Model.Students.OrderBy(o => o.Name)) {
+                <tr>
+                    <td>@s.Name</td>
+                    <td>@s.Email</td>
+                    <td>
+                        <form asp-action="EditStudentSubjectState" method="post">
+                            <input type="hidden" name="Subject.SubjectID" value="@Model.Subject.SubjectID" />
+                            <input type="hidden" name="StudentID" value="@s.StudentID" />
+                            <button class="badge btn btn-danger" type="submit">Fjern</button>
+                        </form>
+                    </td>
+                </tr>
+            }
+        </tbody>
+    </table>
+
+    <table class="table table-sm table-bordered table-hover table-striped">
+        <thead>
+            <tr>
+                <th colspan="3" class="text-center">Ikke tilføjet til fag</th>
+            </tr>
+            <tr>
+                <th style="width: 300px">Navn</th>
+                <th style="width: 200px">Email</th>
+            </tr>
+        </thead>
+        <tbody>
+            @foreach (var s in Model.StudentsNot.OrderBy(o => o.Name)) {
+                <tr>
+                    <td>@s.Name</td>
+                    <td>@s.Email</td>
+                    <td>
+                        <form asp-action="EditStudentSubjectState" method="post">
+                            <input type="hidden" name="Subject.SubjectID" value="@Model.Subject.SubjectID" />
+                            <input type="hidden" name="StudentID" value="@s.StudentID" />
+                            <button class="badge btn btn-success" type="submit">Tilføj</button>
+                        </form>
+                    </td>
+                </tr>
+            }
+        </tbody>
+    </table>
+</div>
+}

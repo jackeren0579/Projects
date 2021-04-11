@@ -1,0 +1,97 @@
+﻿@model ProtocolsListViewModel
+
+<div>
+    <h3 class="text-body">@Model.Subject.Name</h3>
+    <h4>@Model.Date.ToString("dd-MM-yyyy")</h4>
+</div>
+<form asp-action="SaveHours" method="post">
+    <label>Antal timer for lektion</label>
+    <input type="hidden" name="SubjectID" value="@Model.Subject.SubjectID" />
+    <input type="hidden" name="Date" value="@Model.Date" />
+    <input type="text" name="HoursTotal" value="@TempData["HoursTotal"]" />
+    <button class="btn btn-primary" type="submit">Opdater</button>
+</form>
+<a class="btn btn-primary" asp-controller="Registration" asp-action="Index">Tilbage</a>
+<br />
+<br />
+<table class="table table-sm table-striped table-bordered">
+    <thead>
+        <tr>
+            <th>Studerende</th>
+            <th>Fremmødt</th>
+            <th>Virtuelt</th>
+            <th>Fraværende</th>
+        </tr>
+    </thead>
+    <tbody>
+        @foreach (StudentsSubjects studentssubjects in Model.StudentsSubjects.Where(s => s.SubjectID == Model.Subject.SubjectID)) {
+            @foreach (Student student in Model.Students.Where(s => s.StudentID == studentssubjects.StudentID).OrderBy(o => o.Name)) {
+                <tr>
+                    <td>@student.Name</td>
+                    <td>
+                        <form asp-action="SaveAttendance" method="post">
+                            @{ bool presentCheck = false;
+                                foreach (var p in Model.Protocols) {
+                                    if (p.Date == Model.Date && p.SubjectID == Model.Subject.SubjectID && p.StudentID == student.StudentID && p.HoursPresent > 0 && presentCheck == false) {
+                                        presentCheck = true;
+                                    }
+                                }
+                                if (presentCheck) {
+                                    <button class="btn-success" type="submit" name="Value" value="Present">Fremmødt </button>
+                                } else {
+                                    <button style="opacity: 0.5" type="submit" name="Value" value="Present">Fremmødt </button>
+                                }
+                            }
+                            <input type="hidden" name="StudentID" value="@student.StudentID" />
+                            <input type="hidden" name="HoursTotal" value="@TempData["HoursTotal"]" />
+                            <input type="hidden" name="SubjectID" value="@Model.Subject.SubjectID" />
+                            <input type="hidden" name="Date" value="@Model.Date" />
+                        </form>
+                    </td>
+                    <td>
+                        <form asp-action="SaveAttendance" method="post">
+                            @{ bool virtualCheck = false;
+                                foreach (var p in Model.Protocols) {
+                                    if (p.Date == Model.Date && p.SubjectID == Model.Subject.SubjectID && p.StudentID == student.StudentID && p.HoursVirtual > 0 && virtualCheck == false) {
+                                        virtualCheck = true;
+                                    }
+
+                                }
+                                if (virtualCheck) {
+                                    <button class="btn-warning" type="submit" name="Value" value="Virtual">Virtuelt </button>
+                                } else {
+                                    <button style="opacity: 0.5" type="submit" name="Value" value="Virtual">Virtuelt </button>
+                                }
+                            }
+                            <input type="hidden" name="StudentID" value="@student.StudentID" />
+                            <input type="hidden" name="HoursTotal" value="@TempData["HoursTotal"]" />
+                            <input type="hidden" name="SubjectID" value="@Model.Subject.SubjectID" />
+                            <input type="hidden" name="Date" value="@Model.Date" />
+                        </form>
+                    </td>
+                    <td>
+                        <form asp-action="SaveAttendance" method="post">
+                            @{
+                                bool absentCheck = false;
+                                foreach (var p in Model.Protocols) {
+                                    if (p.Date == Model.Date && p.SubjectID == Model.Subject.SubjectID && p.StudentID == student.StudentID && p.HoursVirtual == 0 && p.HoursPresent == 0 && absentCheck == false) {
+                                        absentCheck = true;
+                                    }
+                                }
+                                if (absentCheck) {
+                                    <button class="btn-danger" type="submit" name="Value" value="Absent">Fraværende </button>
+                                } else {
+                                    <button style="opacity: 0.5" type="submit" name="Value" value="Absent">Fraværende </button>
+                                }
+                            }
+                            <input type="hidden" name="StudentID" value="@student.StudentID" />
+                            <input type="hidden" name="HoursTotal" value="@TempData["HoursTotal"]" />
+                            <input type="hidden" name="SubjectID" value="@Model.Subject.SubjectID" />
+                            <input type="hidden" name="Date" value="@Model.Date" />
+                        </form>
+                    </td>
+                </tr>
+            }
+        }
+    </tbody>
+</table>

@@ -1,0 +1,45 @@
+﻿@model ProtocolsListViewModel
+
+    <center>
+        <table class="table table-sm table-striped table-bordered" style="width: 600px">
+            <thead>
+                <tr><th colspan="4" class="text-center">@Model.Subject.Name</th></tr>
+                <tr>
+                    <th style="width: 200px">Navn</th>
+                    <th class="text-right" style="width: 1px">Fremmøde</th>
+                    <th class="text-right" style="width: 1px">Virtuel</th>
+                    <th class="text-right" style="width: 1px">Fravær</th>
+                </tr>
+            </thead>
+            <tbody>
+                @foreach (KeyValuePair<int, List<double>> kvpList in Model.AttendanceList) {
+                    <tr>
+                        @foreach (Student student in Model.Students.Where(s => s.StudentID == kvpList.Key).OrderBy(o => o.Name)) {
+                            <td>@student.Name</td>
+                        }
+                        @{ int x = 1; }
+                        @foreach (double procent in kvpList.Value) {
+                            ViewBag.BgColor = null;
+
+                            if (procent == 100 || procent == 0) {
+                                ViewBag.Value = procent.ToString("#0") + "%";
+                            } else {
+                                ViewBag.Value = procent.ToString("#0.0") + "%";
+                            }
+
+                            if (x == 3) {
+                                if (procent > 35 && procent <= 50) {
+                                    ViewBag.BgColor = "bg-voreswarning";
+                                } else if (procent > 50) {
+                                    ViewBag.BgColor = "bg-voresdanger";
+                                }
+                            }
+                            <td class="@ViewBag.BgColor text-right">@ViewBag.Value</td>
+                            x++;
+                        }
+                    </tr>
+                }
+            </tbody>
+        </table>
+        <a class="badge btn btn-primary" asp-action="Index" asp-controller="User">Tilbage</a>
+    </center>

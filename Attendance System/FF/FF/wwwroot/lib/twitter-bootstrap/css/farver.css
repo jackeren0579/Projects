@@ -1,0 +1,29 @@
+﻿.bg-voressuccess {
+    background-color: #AAFFAA !important;
+}
+
+a.bg-voressuccess:hover, a.bg-voressuccess:focus,
+button.bg-voressuccess:hover,
+button.bg-voressuccess:focus {
+    background-color: #00FF00 !important;
+}
+
+.bg-voreswarning {
+    background-color: #FFFFAA !important;
+}
+
+a.bg-voreswarning:hover, a.bg-voreswarning:focus,
+button.bg-voreswarning:hover,
+button.bg-voreswarning:focus {
+    background-color: #FFFF00 !important;
+}
+
+.bg-voresdanger {
+    background-color: #FFAAAA !important;
+}
+
+a.bg-voresdanger:hover, a.bg-voresdanger:focus,
+button.bg-voresdanger:hover,
+button.bg-voresdanger:focus {
+    background-color: #FF0000 !important;
+}

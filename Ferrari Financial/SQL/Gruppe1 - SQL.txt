@@ -1,0 +1,180 @@
+USE Ferrari;
+
+GO
+--DROP TABLES IF EXISTS
+DROP TABLE IF EXISTS CustomerLoanDetail;
+ DROP TABLE IF EXISTS CustomerOrderDetail;
+DROP TABLE IF EXISTS  CustomerPhone;
+DROP TABLE IF EXISTS  FFCustomer;
+DROP TABLE IF EXISTS  CustomerCityZip;
+DROP TABLE IF EXISTS StaffJobTitle;
+DROP TABLE IF EXISTS DPStaff;
+DROP TABLE IF EXISTS DepartmentJobTitle;
+DROP TABLE IF EXISTS SalesDepartment;
+DROP TABLE IF EXISTS CarsForSale;
+
+-- Create CityZipCode Table and Connect to City.
+CREATE TABLE CustomerCityZip(
+ZipCode int NOT NULL,
+CityName nvarchar(30)NOT NULL,
+PRIMARY KEY(ZipCode)
+);
+-- Create values
+INSERT INTO CustomerCityZip VALUES (7400, 'Herning')
+INSERT INTO CustomerCityZip VALUES (8000, 'Århus')
+INSERT INTO CustomerCityZip VALUES (2000, 'København')
+INSERT INTO CustomerCityZip VALUES (7500, 'Holstebro')
+INSERT INTO CustomerCityZip VALUES (7361, 'Ejstrupholm')
+INSERT INTO CustomerCityZip VALUES (7430, 'Ikast')
+
+
+--Create FFCustomer Table.
+CREATE TABLE FFCustomer(
+CustomerID nvarchar(50) NOT NULL,
+CustomerCPR int NOT NULL,
+F_Name nvarchar(30) NOT NULL,
+L_Name nvarchar(30) NOT NULL,
+Adress nvarchar(30) NOT NULL,
+ZipCode int NOT NULL,
+CONSTRAINT FK_Zip FOREIGN KEY (ZipCode)
+   REFERENCES CustomerCityZip(ZipCode),
+PRIMARY KEY(CustomerID)
+);
+-- Create values
+INSERT INTO FFCustomer VALUES ('rudi@dirtyranch.dk', 0304771221, 'rudi', 'Eriksen', 'Klokkekildevej 25', 7400)
+INSERT INTO FFCustomer VALUES ('Viktor@dirtyranch.dk', 0304771321, 'Viktor', 'Eriksen', 'Kiderisvej 25', 7400)
+INSERT INTO FFCustomer VALUES ('Jack-Schak@dep.com', 0908921657, 'Jack', 'Nue', 'Rosenholmgade 43', 2000 )
+INSERT INTO FFCustomer VALUES ('Zombi@apoc.nu', 0304011321, 'Kuk', 'kuku', 'Tullemorevej 22', 7430)
+
+--Create Customer Phone Table and connect Unique phone to Unique customer.
+CREATE TABLE CustomerPhone(
+CustomerID nvarchar(50)NOT NULL,
+CustomerPhone int NOT NULL,
+CONSTRAINT FK_CustomerPhone FOREIGN KEY (CustomerID)
+   REFERENCES FFCustomer(CustomerID),
+PRIMARY KEY(CustomerID)
+);
+
+-- Create values
+INSERT INTO CustomerPhone VALUES('rudi@dirtyranch.dk', 91529090)
+INSERT INTO CustomerPhone VALUES('Viktor@dirtyranch.dk', 75772860)
+INSERT INTO CustomerPhone VALUES('Jack-Schak@dep.com', 91566565)
+INSERT INTO CustomerPhone VALUES('Zombi@apoc.nu', 91566528)
+
+
+
+-- Create SalesDepartment TABLE
+CREATE TABLE SalesDepartment (
+DepartmentName nvarchar(50) NOT NULL,
+DP_Adress nvarchar(50) NOT NULL,
+DP_CityZip int NOT NULL,
+PRIMARY KEY(DepartmentName)
+);
+
+-- Create values
+INSERT INTO Salesdepartment VALUES ('Ferrari CPH', 'Frederiksberg 488', 2000)
+INSERT INTO Salesdepartment VALUES ('Ferrari Herning', 'Østergade 22', 7400)
+INSERT INTO Salesdepartment VALUES ('Ferrari Hornslet', 'Havnen', 3190)
+
+--Create Department jobtitle table.
+CREATE TABLE DepartmentJobTitle(
+DepartmentName nvarchar(50) NOT NULL ,
+JobTitle nvarchar(30) NOT NULL UNIQUE,
+CONSTRAINT FK_Department FOREIGN KEY (DepartmentName)
+REFERENCES SalesDepartment(DepartmentName),
+PRIMARY KEY(DepartmentName, JobTitle)
+);
+
+-- Create values
+INSERT INTO DepartmentJobTitle VALUES ('Ferrari Herning', 'Cleaning')
+INSERT INTO DepartmentJobTitle VALUES ('Ferrari Herning', 'Accounting')
+INSERT INTO DepartmentJobTitle VALUES ('Ferrari Herning', 'Sales')
+INSERT INTO DepartmentJobTitle VALUES ('Ferrari Herning', 'SalesManager')
+INSERT INTO DepartmentJobTitle VALUES ('Ferrari Herning', 'DP_CEO')
+
+-- Create Department staffmember.
+CREATE TABLE DPStaff (
+StaffID int IDENTITY,
+Staff_F_Name nvarchar(30) NOT NULL,
+Staff_L_Name nvarchar(30) NOT NULL,
+PRIMARY KEY (StaffID)
+);
+
+-- Create values
+INSERT INTO DPStaff VALUES('Peter', 'Peter')
+INSERT INTO DPStaff VALUES('Martin', 'Lauritzen')
+INSERT INTO DPStaff VALUES('Søren', 'Schrøder')
+INSERT INTO DPStaff VALUES('Bruce', 'willis')
+INSERT INTO DPStaff VALUES('Arnold ', 'Schwarzenegger')
+
+--Create table to connect staff to jobtitle.
+CREATE TABLE StaffJobTitle(
+StaffID int  IDENTITY NOT NULL, 
+JobTitle nvarchar(30) NOT NULL,
+JobTitleCreditLimit float,
+CONSTRAINT FK_StaffID FOREIGN KEY (StaffID)
+   REFERENCES DPStaff(StaffID),
+CONSTRAINT FK_JobTitle FOREIGN KEY (JobTitle)
+   REFERENCES DepartmentJobTitle(JobTitle),
+PRIMARY KEY(StaffID)
+);
+
+-- Create values
+INSERT INTO StaffJobTitle VALUES ('Cleaning', 0 )
+INSERT INTO StaffJobTitle VALUES ('Accounting', 0 )
+INSERT INTO StaffJobTitle VALUES ('Sales', 5000000 )
+INSERT INTO StaffJobTitle VALUES ('SalesManager', 990000000 )
+
+
+--Create Table for Cars avalible.
+CREATE TABLE CarsForSale(
+ModelNumID int IDENTITY NOT NULL,
+ModelName nvarchar(30) NOT NULL,
+ModelPrice float NOT NULL,
+PRIMARY KEY(ModelNumID)
+);
+
+-- Create values
+INSERT INTO CarsForSale VALUES ('Ferrari 488 GTB', 4301011)
+INSERT INTO CarsForSale VALUES ('Ferrari 812 Super fast', 5761881)
+INSERT INTO CarsForSale VALUES ('Ferrari SF90 STRADEL', 9876652)
+INSERT INTO CarsForSale VALUES ('Ferrari Monza SP2', 7233122)
+INSERT INTO CarsForSale VALUES ('Ferrari Roma', 5248655)
+
+--Create table for customer order details.
+CREATE TABLE CustomerOrderDetail(
+OrderID int IDENTITY NOT NULL,
+CustomerID nvarchar(50) NULL,
+StaffID int NOT NULL,
+ModelNumID int NOT NULL,
+CONSTRAINT FK_OrderCustomerID FOREIGN KEY (CustomerID)
+   REFERENCES FFCustomer(CustomerID),
+CONSTRAINT FK_OrderStaffID FOREIGN KEY (StaffID)
+   REFERENCES DPStaff(StaffID),
+CONSTRAINT FK_ModelNUM FOREIGN KEY (ModelNumID)
+   REFERENCES CarsForSale(ModelNumID),
+PRIMARY KEY(OrderID)
+);
+
+-- Create values
+INSERT INTO CustomerOrderDetail VALUES ('rudi@dirtyranch.dk', 3, 1)
+INSERT INTO CustomerOrderDetail VALUES ('Viktor@dirtyranch.dk', 3, 2)
+INSERT INTO CustomerOrderDetail VALUES ('Jack-Schak@dep.com', 3, 3)
+INSERT INTO CustomerOrderDetail VALUES ('Zombi@apoc.nu', 3, 1)
+
+
+--Create Table for Customer loan details.
+CREATE TABLE CustomerLoanDetail(
+LoanDetailID int IDENTITY NOT NULL,
+OrderID int NOT NULL,
+CustomerDownPayment int NOT NULL,
+FF_Interest float NOT NULL,
+NumberOfRepayments int NOT NULL,
+Approved nvarchar(14),
+CONSTRAINT FK_OrderIDNum FOREIGN KEY (OrderID)
+   REFERENCES CustomerOrderDetail(OrderID),
+PRIMARY KEY(LoanDetailID)
+);
+
+-- Create values
+INSERT INTO CustomerLoanDetail VALUES(1, 120000, 7.29, 72, 'Bekræftet')

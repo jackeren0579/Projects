@@ -1,0 +1,73 @@
+﻿@model ProtocolsListViewModel
+
+<table class="table table-sm table-striped table-bordered table-hover">
+    <thead>
+        <tr><th colspan="3" class="text-center">Dagens fag</th></tr>
+        <tr>
+            <th>Fag</th>
+            <th>Dato</th>
+            <th>Actions</th>
+        </tr>
+    </thead>
+    <tbody>
+        @if (Model.Protocols.Count() > 0) {
+            List<ProtocolCheck> checkDuplicate = new List<ProtocolCheck>();
+            @foreach (Subject subject in Model.Subjects) {
+                @foreach (Protocol protocol in Model.Protocols.Where(p => p.SubjectID == subject.SubjectID && p.Date == DateTime.Now.Date)) {
+                    bool duplicate = false;
+                    @foreach (ProtocolCheck pc in checkDuplicate) {
+                        if (pc.SubjectID == subject.SubjectID && pc.Date == protocol.Date) {
+                            duplicate = true;
+                        }
+                    }
+                    checkDuplicate.Add(new ProtocolCheck { SubjectID = subject.SubjectID, Date = protocol.Date });
+
+                    if (!duplicate) {
+                        <tr>
+                            <td class="font-weight-bold">@subject.Name</td>
+                            <td class="font-weight-bold">@protocol.Date.ToString("dd-MM-yyyy")</td>
+                            <td><a class="badge btn btn-dark text-white" asp-action="RegisterAttendance" asp-route-date="@protocol.Date.ToString("MM-dd-yyyy")" asp-route-subjectID="@subject.SubjectID">Redigér</a></td>
+                        </tr>
+                    }
+                }
+            }
+        }
+    </tbody>
+</table>
+<br />
+<br />
+
+<table class="table table-sm table-striped table-bordered">
+    <thead>
+        <tr><th colspan="3" class="text-center">Tidligere dages fag</th></tr>
+        <tr>
+            <th>Fag</th>
+            <th>Dato</th>
+            <th>Actions</th>
+        </tr>
+    </thead>
+    <tbody>
+        @if (Model.Protocols.Count() > 0) {
+            List<ProtocolCheck> checkDuplicate = new List<ProtocolCheck>();
+            @foreach (Subject subject in Model.Subjects) {
+                @foreach (Protocol protocol in Model.Protocols.Where(p => p.SubjectID == subject.SubjectID && p.Date != DateTime.Now.Date)) {
+                    bool duplicate = false;
+                    @foreach (ProtocolCheck pc in checkDuplicate) {
+                        if (pc.SubjectID == subject.SubjectID && pc.Date == protocol.Date) {
+                            duplicate = true;
+                        }
+                    }
+                    checkDuplicate.Add(new ProtocolCheck { SubjectID = subject.SubjectID, Date = protocol.Date });
+
+                    if (!duplicate) {
+                        <tr>
+                            <td class="font-weight-bold">@subject.Name</td>
+                            <td class="font-weight-bold">@protocol.Date.ToString("dd-MM-yyyy")</td>
+                            <td><a class="badge btn btn-dark text-white" asp-action="RegisterAttendance" asp-route-date="@protocol.Date.ToString("MM-dd-yyyy")" asp-route-subjectID="@subject.SubjectID">Redigér</a></td>
+                        </tr>
+                    }
+                }
+            }
+        }
+    </tbody>
+</table>

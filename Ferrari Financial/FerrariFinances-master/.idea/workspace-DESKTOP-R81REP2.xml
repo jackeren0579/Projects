@@ -1,0 +1,381 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="ChangeListManager">
+    <list default="true" id="0eef14be-1476-49ad-ae48-3caa971dde20" name="Default Changelist" comment="">
+      <change beforePath="$PROJECT_DIR$/.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/presentation/MainScreen.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/presentation/MainScreen.java" afterDir="false" />
+    </list>
+    <option name="SHOW_DIALOG" value="false" />
+    <option name="HIGHLIGHT_CONFLICTS" value="true" />
+    <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
+    <option name="LAST_RESOLUTION" value="IGNORE" />
+  </component>
+  <component name="FileTemplateManagerImpl">
+    <option name="RECENT_TEMPLATES">
+      <list>
+        <option value="Class" />
+      </list>
+    </option>
+  </component>
+  <component name="Git.Settings">
+    <option name="RECENT_BRANCH_BY_REPOSITORY">
+      <map>
+        <entry key="$PROJECT_DIR$" value="master" />
+      </map>
+    </option>
+    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
+  </component>
+  <component name="IgnoredFileRootStore">
+    <option name="generatedRoots">
+      <set>
+        <option value="C:\Users\victo\OneDrive\Projekter\FerrariFinances" />
+        <option value="C:\Users\victo\OneDrive\Projekter\FerrariFinances\.idea" />
+      </set>
+    </option>
+  </component>
+  <component name="ProjectId" id="1b7VUBNWnBWpJRUrvHelqfxBBea" />
+  <component name="ProjectLevelVcsManager" settingsEditedManually="true">
+    <ConfirmationsSetting value="2" id="Add" />
+  </component>
+  <component name="ProjectViewState">
+    <option name="hideEmptyMiddlePackages" value="true" />
+    <option name="showExcludedFiles" value="true" />
+    <option name="showLibraryContents" value="true" />
+  </component>
+  <component name="PropertiesComponent">
+    <property name="ASKED_ADD_EXTERNAL_FILES" value="true" />
+    <property name="RunOnceActivity.ShowReadmeOnStart" value="true" />
+    <property name="SHARE_PROJECT_CONFIGURATION_FILES" value="true" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$" />
+    <property name="project.structure.last.edited" value="Project" />
+    <property name="project.structure.proportion" value="0.15" />
+    <property name="project.structure.side.proportion" value="0.2" />
+    <property name="settings.editor.selected.configurable" value="settings.github" />
+  </component>
+  <component name="RunManager">
+    <configuration name="Main" type="Application" factoryName="Application" temporary="true">
+      <option name="MAIN_CLASS_NAME" value="logic.Main" />
+      <module name="FerrariFinances" />
+      <option name="VM_PARAMETERS" value="--module-path $PROJECT_DIR$/../../DirtyJam/Victor/DirtyJam/libs/SDK/javafx-sdk-13.0.1/lib --add-modules=javafx.controls,javafx.fxml,javafx.media" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="logic.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="Main" type="Application" factoryName="Application" temporary="true">
+      <option name="MAIN_CLASS_NAME" value="logic.Main" />
+      <module name="FerrariFinances" />
+      <option name="VM_PARAMETERS" value="--module-path $PROJECT_DIR$/../../DirtyJam/Victor/DirtyJam/libs/SDK/javafx-sdk-13.0.1/lib --add-modules=javafx.controls,javafx.fxml,javafx.media" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="logic.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="Main" type="Application" factoryName="Application" temporary="true">
+      <option name="MAIN_CLASS_NAME" value="logic.Main" />
+      <module name="FerrariFinances" />
+      <option name="VM_PARAMETERS" value="--module-path $PROJECT_DIR$/../../DirtyJam/Victor/DirtyJam/libs/SDK/javafx-sdk-13.0.1/lib --add-modules=javafx.controls,javafx.fxml,javafx.media" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="logic.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="Main" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="test.Main" />
+      <module name="FerrariFinances" />
+      <option name="VM_PARAMETERS" value="--module-path $PROJECT_DIR$/../../DirtyJam/Victor/DirtyJam/libs/SDK/javafx-sdk-13.0.1/lib --add-modules=javafx.controls,javafx.fxml,javafx.media" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="test.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="Main" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="logic.Main" />
+      <module name="FerrariFinances" />
+      <option name="VM_PARAMETERS" value="--module-path $PROJECT_DIR$/../../DirtyJam/Victor/DirtyJam/libs/SDK/javafx-sdk-13.0.1/lib --add-modules=javafx.controls,javafx.fxml,javafx.media" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="logic.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="Main" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="logic.Main" />
+      <module name="FerrariFinances" />
+      <option name="VM_PARAMETERS" value="--module-path $PROJECT_DIR$/../Libs/SDK/javafx-sdk-13.0.1/lib/ --add-modules=javafx.controls, javafx.fxml, javafx.media" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="logic.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <recent_temporary>
+      <list>
+        <item itemvalue="Application.Main" />
+        <item itemvalue="Application.Main" />
+        <item itemvalue="Application.Main" />
+        <item itemvalue="Application.Main" />
+        <item itemvalue="Application.Main" />
+      </list>
+    </recent_temporary>
+  </component>
+  <component name="SvnConfiguration">
+    <configuration />
+  </component>
+  <component name="TaskManager">
+    <task active="true" id="Default" summary="Default task">
+      <changelist id="0eef14be-1476-49ad-ae48-3caa971dde20" name="Default Changelist" comment="" />
+      <created>1587983132188</created>
+      <option name="number" value="Default" />
+      <option name="presentableId" value="Default" />
+      <updated>1587983132188</updated>
+    </task>
+    <task id="LOCAL-00001" summary="Logo has been added and the stage have been made undecorated to be custom made.">
+      <created>1588589948172</created>
+      <option name="number" value="00001" />
+      <option name="presentableId" value="LOCAL-00001" />
+      <option name="project" value="LOCAL" />
+      <updated>1588589948172</updated>
+    </task>
+    <task id="LOCAL-00002" summary="throws exception has been removed, it was redundant.">
+      <created>1588590002287</created>
+      <option name="number" value="00002" />
+      <option name="presentableId" value="LOCAL-00002" />
+      <option name="project" value="LOCAL" />
+      <updated>1588590002287</updated>
+    </task>
+    <task id="LOCAL-00003" summary="Ferrari logo has been added to resource folder.">
+      <created>1588590039609</created>
+      <option name="number" value="00003" />
+      <option name="presentableId" value="LOCAL-00003" />
+      <option name="project" value="LOCAL" />
+      <updated>1588590039609</updated>
+    </task>
+    <task id="LOCAL-00004" summary="Libs have been added, close button and logo on all screens but loan screen. Close button png has been added to resource folder. Some relocation have been made on PersonPopUp.">
+      <created>1588595402150</created>
+      <option name="number" value="00004" />
+      <option name="presentableId" value="LOCAL-00004" />
+      <option name="project" value="LOCAL" />
+      <updated>1588595402151</updated>
+    </task>
+    <task id="LOCAL-00005" summary="Init commit på design 2.0 efter milepæl A præsentationen.">
+      <created>1588764148471</created>
+      <option name="number" value="00005" />
+      <option name="presentableId" value="LOCAL-00005" />
+      <option name="project" value="LOCAL" />
+      <updated>1588764148471</updated>
+    </task>
+    <task id="LOCAL-00006" summary="Skrevet kommentare til de kopierbare elementer og ændret skrifttypen til ekstern font">
+      <created>1588766821428</created>
+      <option name="number" value="00006" />
+      <option name="presentableId" value="LOCAL-00006" />
+      <option name="project" value="LOCAL" />
+      <updated>1588766821428</updated>
+    </task>
+    <task id="LOCAL-00007" summary="Main skærm og opret lån knappen er blevet designet, men uden funktion.">
+      <created>1588778520385</created>
+      <option name="number" value="00007" />
+      <option name="presentableId" value="LOCAL-00007" />
+      <option name="project" value="LOCAL" />
+      <updated>1588778520385</updated>
+    </task>
+    <task id="LOCAL-00008" summary="init commit på design 2.0, der er blevet lavet dele med GUI funktioner i forhold til at få kunder ind i lånetilbuddet.">
+      <created>1588857540717</created>
+      <option name="number" value="00008" />
+      <option name="presentableId" value="LOCAL-00008" />
+      <option name="project" value="LOCAL" />
+      <updated>1588857540718</updated>
+    </task>
+    <task id="LOCAL-00009" summary="Mindre design ændringer">
+      <created>1588924450171</created>
+      <option name="number" value="00009" />
+      <option name="presentableId" value="LOCAL-00009" />
+      <option name="project" value="LOCAL" />
+      <updated>1588924450171</updated>
+    </task>
+    <option name="localTasksCounter" value="10" />
+    <servers />
+  </component>
+  <component name="UnknownFeatures">
+    <option featureType="com.intellij.fileTypeFactory" implementationName="*.css" />
+  </component>
+  <component name="Vcs.Log.Tabs.Properties">
+    <option name="TAB_STATES">
+      <map>
+        <entry key="MAIN">
+          <value>
+            <State>
+              <option name="COLUMN_ORDER" />
+            </State>
+          </value>
+        </entry>
+      </map>
+    </option>
+  </component>
+  <component name="VcsManagerConfiguration">
+    <option name="ADD_EXTERNAL_FILES_SILENTLY" value="true" />
+    <MESSAGE value="Logo has been added and the stage have been made undecorated to be custom made." />
+    <MESSAGE value="throws exception has been removed, it was redundant." />
+    <MESSAGE value="Ferrari logo has been added to resource folder." />
+    <MESSAGE value="Libs have been added, close button and logo on all screens but loan screen. Close button png has been added to resource folder. Some relocation have been made on PersonPopUp." />
+    <MESSAGE value="Init commit på design 2.0 efter milepæl A præsentationen." />
+    <MESSAGE value="Skrevet kommentare til de kopierbare elementer og ændret skrifttypen til ekstern font" />
+    <MESSAGE value="Main skærm og opret lån knappen er blevet designet, men uden funktion." />
+    <MESSAGE value="init commit på design 2.0, der er blevet lavet dele med GUI funktioner i forhold til at få kunder ind i lånetilbuddet." />
+    <MESSAGE value="Mindre design ændringer" />
+    <option name="LAST_COMMIT_MESSAGE" value="Mindre design ændringer" />
+  </component>
+  <component name="WindowStateProjectService">
+    <state x="361" y="75" key="#Project_Structure" timestamp="1589184691737">
+      <screen x="0" y="0" width="1536" height="824" />
+    </state>
+    <state x="361" y="75" key="#Project_Structure/0.0.1536.824@0.0.1536.824" timestamp="1589184691737" />
+    <state x="331" y="139" key="#com.intellij.execution.impl.EditConfigurationsDialog" timestamp="1589184753020">
+      <screen x="0" y="0" width="1536" height="824" />
+    </state>
+    <state x="331" y="139" key="#com.intellij.execution.impl.EditConfigurationsDialog/0.0.1536.824@0.0.1536.824" timestamp="1589184753020" />
+    <state x="414" y="176" key="#com.intellij.execution.impl.EditConfigurationsDialog/0.0.1920.1040/-1920.0.1920.1040@0.0.1920.1040" timestamp="1588662564533" />
+    <state x="740" y="226" key="#com.intellij.ide.macro.MacrosDialog" timestamp="1588320821508">
+      <screen x="0" y="0" width="1920" height="1040" />
+    </state>
+    <state x="740" y="226" key="#com.intellij.ide.macro.MacrosDialog/0.0.1920.1040/-1920.0.1920.1040@0.0.1920.1040" timestamp="1588320821508" />
+    <state x="765" y="230" key="#com.intellij.ide.util.MemberChooser" timestamp="1588322810405">
+      <screen x="0" y="0" width="1920" height="1040" />
+    </state>
+    <state x="765" y="230" key="#com.intellij.ide.util.MemberChooser/0.0.1920.1040/-1920.0.1920.1040@0.0.1920.1040" timestamp="1588322810405" />
+    <state x="808" y="410" key="#com.intellij.ide.util.projectWizard.JdkChooserPanel.MyDialog" timestamp="1588696936505">
+      <screen x="0" y="0" width="1920" height="1040" />
+    </state>
+    <state x="808" y="410" key="#com.intellij.ide.util.projectWizard.JdkChooserPanel.MyDialog/0.0.1920.1040/-1920.0.1920.1040@0.0.1920.1040" timestamp="1588696936505" />
+    <state x="690" y="268" key="#com.intellij.refactoring.safeDelete.UnsafeUsagesDialog" timestamp="1588766710961">
+      <screen x="0" y="0" width="1920" height="1040" />
+    </state>
+    <state x="690" y="268" key="#com.intellij.refactoring.safeDelete.UnsafeUsagesDialog/0.0.1920.1040/-1920.0.1920.1040@0.0.1920.1040" timestamp="1588766710961" />
+    <state x="385" y="115" key="CommitChangelistDialog2" timestamp="1588924448191">
+      <screen x="0" y="0" width="1920" height="1040" />
+    </state>
+    <state x="385" y="115" key="CommitChangelistDialog2/0.0.1920.1040/-1920.0.1920.1040@0.0.1920.1040" timestamp="1588924448191" />
+    <state x="740" y="275" key="FileChooserDialogImpl" timestamp="1588582853592">
+      <screen x="0" y="0" width="1920" height="1040" />
+    </state>
+    <state x="740" y="275" key="FileChooserDialogImpl/0.0.1920.1040/-1920.0.1920.1040@0.0.1920.1040" timestamp="1588582853592" />
+    <state x="825" y="414" key="Github.ShareDialog" timestamp="1587984035293">
+      <screen x="0" y="0" width="1920" height="1040" />
+    </state>
+    <state x="825" y="414" key="Github.ShareDialog/0.0.1920.1040/-1920.0.1920.1040@0.0.1920.1040" timestamp="1587984035293" />
+    <state x="707" y="226" key="Github.UntrackedFilesDialog" timestamp="1587984050850">
+      <screen x="0" y="0" width="1920" height="1040" />
+    </state>
+    <state x="707" y="226" key="Github.UntrackedFilesDialog/0.0.1920.1040/-1920.0.1920.1040@0.0.1920.1040" timestamp="1587984050850" />
+    <state width="1493" height="261" key="GridCell.Tab.0.bottom" timestamp="1589184797603">
+      <screen x="0" y="0" width="1536" height="824" />
+    </state>
+    <state width="1493" height="261" key="GridCell.Tab.0.bottom/0.0.1536.824@0.0.1536.824" timestamp="1589184797603" />
+    <state width="1877" height="282" key="GridCell.Tab.0.bottom/0.0.1920.1040/-1920.0.1920.1040@-1920.0.1920.1040" timestamp="1588432090903" />
+    <state width="1877" height="284" key="GridCell.Tab.0.bottom/0.0.1920.1040/-1920.0.1920.1040@0.0.1920.1040" timestamp="1589182504445" />
+    <state width="1493" height="261" key="GridCell.Tab.0.center" timestamp="1589184797603">
+      <screen x="0" y="0" width="1536" height="824" />
+    </state>
+    <state width="1493" height="261" key="GridCell.Tab.0.center/0.0.1536.824@0.0.1536.824" timestamp="1589184797603" />
+    <state width="1877" height="282" key="GridCell.Tab.0.center/0.0.1920.1040/-1920.0.1920.1040@-1920.0.1920.1040" timestamp="1588432090902" />
+    <state width="1877" height="284" key="GridCell.Tab.0.center/0.0.1920.1040/-1920.0.1920.1040@0.0.1920.1040" timestamp="1589182504445" />
+    <state width="1493" height="261" key="GridCell.Tab.0.left" timestamp="1589184797603">
+      <screen x="0" y="0" width="1536" height="824" />
+    </state>
+    <state width="1493" height="261" key="GridCell.Tab.0.left/0.0.1536.824@0.0.1536.824" timestamp="1589184797603" />
+    <state width="1877" height="282" key="GridCell.Tab.0.left/0.0.1920.1040/-1920.0.1920.1040@-1920.0.1920.1040" timestamp="1588432090902" />
+    <state width="1877" height="284" key="GridCell.Tab.0.left/0.0.1920.1040/-1920.0.1920.1040@0.0.1920.1040" timestamp="1589182504445" />
+    <state width="1493" height="261" key="GridCell.Tab.0.right" timestamp="1589184797603">
+      <screen x="0" y="0" width="1536" height="824" />
+    </state>
+    <state width="1493" height="261" key="GridCell.Tab.0.right/0.0.1536.824@0.0.1536.824" timestamp="1589184797603" />
+    <state width="1877" height="282" key="GridCell.Tab.0.right/0.0.1920.1040/-1920.0.1920.1040@-1920.0.1920.1040" timestamp="1588432090902" />
+    <state width="1877" height="284" key="GridCell.Tab.0.right/0.0.1920.1040/-1920.0.1920.1040@0.0.1920.1040" timestamp="1589182504445" />
+    <state width="1493" height="261" key="GridCell.Tab.1.bottom" timestamp="1589184797604">
+      <screen x="0" y="0" width="1536" height="824" />
+    </state>
+    <state width="1493" height="261" key="GridCell.Tab.1.bottom/0.0.1536.824@0.0.1536.824" timestamp="1589184797604" />
+    <state width="1877" height="348" key="GridCell.Tab.1.bottom/0.0.1920.1040/-1920.0.1920.1040@0.0.1920.1040" timestamp="1588778875136" />
+    <state width="1493" height="261" key="GridCell.Tab.1.center" timestamp="1589184797604">
+      <screen x="0" y="0" width="1536" height="824" />
+    </state>
+    <state width="1493" height="261" key="GridCell.Tab.1.center/0.0.1536.824@0.0.1536.824" timestamp="1589184797604" />
+    <state width="1877" height="348" key="GridCell.Tab.1.center/0.0.1920.1040/-1920.0.1920.1040@0.0.1920.1040" timestamp="1588778875136" />
+    <state width="1493" height="261" key="GridCell.Tab.1.left" timestamp="1589184797603">
+      <screen x="0" y="0" width="1536" height="824" />
+    </state>
+    <state width="1493" height="261" key="GridCell.Tab.1.left/0.0.1536.824@0.0.1536.824" timestamp="1589184797603" />
+    <state width="1877" height="348" key="GridCell.Tab.1.left/0.0.1920.1040/-1920.0.1920.1040@0.0.1920.1040" timestamp="1588778875136" />
+    <state width="1493" height="261" key="GridCell.Tab.1.right" timestamp="1589184797604">
+      <screen x="0" y="0" width="1536" height="824" />
+    </state>
+    <state width="1493" height="261" key="GridCell.Tab.1.right/0.0.1536.824@0.0.1536.824" timestamp="1589184797604" />
+    <state width="1877" height="348" key="GridCell.Tab.1.right/0.0.1920.1040/-1920.0.1920.1040@0.0.1920.1040" timestamp="1588778875136" />
+    <state x="679" y="243" key="MultipleFileMergeDialog" timestamp="1588696926813">
+      <screen x="0" y="0" width="1920" height="1040" />
+    </state>
+    <state x="679" y="243" key="MultipleFileMergeDialog/0.0.1920.1040/-1920.0.1920.1040@0.0.1920.1040" timestamp="1588696926813" />
+    <state x="461" y="163" key="SettingsEditor" timestamp="1588583199268">
+      <screen x="0" y="0" width="1920" height="1040" />
+    </state>
+    <state x="461" y="163" key="SettingsEditor/0.0.1920.1040/-1920.0.1920.1040@0.0.1920.1040" timestamp="1588583199268" />
+    <state x="552" y="254" key="Vcs.Push.Dialog.v2" timestamp="1588764198656">
+      <screen x="0" y="0" width="1920" height="1040" />
+    </state>
+    <state x="552" y="254" key="Vcs.Push.Dialog.v2/0.0.1920.1040/-1920.0.1920.1040@0.0.1920.1040" timestamp="1588764198656" />
+    <state x="524" y="273" key="com.intellij.ide.util.TipDialog" timestamp="1589184608761">
+      <screen x="0" y="0" width="1536" height="824" />
+    </state>
+    <state x="524" y="273" key="com.intellij.ide.util.TipDialog/0.0.1536.824@0.0.1536.824" timestamp="1589184608761" />
+    <state x="655" y="345" key="com.intellij.ide.util.TipDialog/0.0.1920.1040/-1920.0.1920.1040@0.0.1920.1040" timestamp="1589182346994" />
+    <state x="893" y="159" width="853" height="606" key="find.popup" timestamp="1588768374714">
+      <screen x="0" y="0" width="1920" height="1040" />
+    </state>
+    <state x="893" y="159" width="853" height="606" key="find.popup/0.0.1920.1040/-1920.0.1920.1040@0.0.1920.1040" timestamp="1588768374714" />
+    <state x="735" y="240" key="git4idea.branch.GitSmartOperationDialog" timestamp="1588696965662">
+      <screen x="0" y="0" width="1920" height="1040" />
+    </state>
+    <state x="735" y="240" key="git4idea.branch.GitSmartOperationDialog/0.0.1920.1040/-1920.0.1920.1040@0.0.1920.1040" timestamp="1588696965662" />
+    <state x="663" y="312" key="git4idea.merge.GitPullDialog" timestamp="1588600377926">
+      <screen x="0" y="0" width="1920" height="1040" />
+    </state>
+    <state x="663" y="312" key="git4idea.merge.GitPullDialog/0.0.1920.1040/-1920.0.1920.1040@0.0.1920.1040" timestamp="1588600377926" />
+    <state x="616" y="173" width="672" height="676" key="search.everywhere.popup" timestamp="1589182435498">
+      <screen x="0" y="0" width="1920" height="1040" />
+    </state>
+    <state x="616" y="173" width="672" height="676" key="search.everywhere.popup/0.0.1920.1040/-1920.0.1920.1040@0.0.1920.1040" timestamp="1589182435498" />
+  </component>
+  <component name="com.intellij.coverage.CoverageDataManagerImpl">
+    <SUITE FILE_PATH="coverage/FerrariFinances$Main.ic" NAME="Main Coverage Results" MODIFIED="1588326691250" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="idea" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false">
+      <FILTER>logic.*</FILTER>
+    </SUITE>
+  </component>
+</project>

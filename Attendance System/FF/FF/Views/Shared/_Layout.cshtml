@@ -1,0 +1,36 @@
+﻿@using Microsoft.AspNetCore.Identity
+@inject UserManager<IdentityUser> UserManager
+
+<!DOCTYPE html>
+
+<html>
+<head>
+    <link href="~/lib/twitter-bootstrap/css/bootstrap.css" rel="stylesheet" />
+    <link href="~/lib/twitter-bootstrap/css/farver.css" rel="stylesheet" />
+    <meta name="viewport" content="width=device-width" />
+    <title>@ViewBag.Title</title>
+</head>
+<body>
+    <nav class="navbar navbar-expand-sm navbar-light bg-light mb-4">
+        <div class="navbar-brand"><img src="~/img/ffs.jpg" style="width: 32px; height: 32px" /></div>
+        <ul class="navbar-nav mr-auto"></ul>
+        <div class="collapse navbar-collapse" id="navbarText">
+            <ul class="navbar-nav mr-auto">
+                <li class="nav-item">
+                    <a class="nav-link ml-5" asp-action="Index" asp-controller="User">Forside</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link ml-5" asp-action="Index" asp-controller="Subject">Fag</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link ml-5" asp-action="Index" asp-controller="Registration">Protokolhistorik</a>
+                </li>
+            </ul>
+            <span class="navbar-text">@User.Identity.Name <a class="btn btn-danger text-white" asp-action="Logout" asp-controller="User">Logout</a></span>
+        </div>
+    </nav>
+    <div class="container">
+        @RenderBody()
+    </div>
+</body>
+</html>

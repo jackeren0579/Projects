@@ -1,0 +1,6 @@
+C:\Users\klund\OneDrive\Skole\Datamatiker\JARS\sqljdbc_7.4\enu\auth\x64\sqljdbc_auth.dll skal installeres i C:\Windows\System32
+
+Eclipse:
+mssql-jdbc-7.4.1.jre12 hvis man køre JRE12
+
+[Java Project] -> højreklik: Propeties -> Java Build Path -> Add External JARs -> 

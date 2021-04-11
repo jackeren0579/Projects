@@ -1,0 +1,45 @@
+﻿@model ProtocolsListViewModel
+
+<table class="table table-sm table-striped table-bordered table-hover">
+    <thead>
+        <tr>
+            <th>Fag</th>
+            <th style="width: 1px">Fremmøde</th>
+            <th></th>
+        </tr>
+    </thead>
+    <tbody>
+        @if (Model.Subjects.Count() > 0) {
+            @foreach (Subject subject in Model.Subjects) {
+                @foreach (KeyValuePair<int, double> procent in Model.AttendanceInPercentage.Where(a => a.Key == subject.SubjectID)) {
+                    <tr>
+                        <td>@subject.Name</td>
+                        @{ var percentage = procent.Value;
+                            ViewBag.BgColor = null;
+                            ViewBag.Value = null;
+                            @if (percentage.ToString() == "NaN") {
+                                ViewBag.Value = "N/A";
+                            } else {
+                                ViewBag.Value = percentage.ToString("#0.0") + "%";
+                            } if (percentage > 60 && percentage <= 75) {
+                                ViewBag.BgColor = "bg-voreswarning";
+                            } else if (percentage <= 60) {
+                                ViewBag.BgColor = "bg-voresdanger";
+                            }
+                            <td class="@ViewBag.BgColor text-right">@ViewBag.Value</td>
+                        }
+                        <td>
+                            <a class="badge btn btn-success" asp-action="RegisterAttendance" asp-controller="Registration" asp-route-subjectID="@subject.SubjectID" asp-route-date="@DateTime.Today.ToString("MM-dd-yyyy")">Registrér</a>
+                            <a class="badge btn btn-primary" asp-action="StudentStatistics" asp-controller="Student" asp-route-subjectID="@subject.SubjectID">Detaljer</a>
+                        </td>
+                    </tr>
+
+                }
+            }
+        } else {
+            <tr>
+                <td colspan="3" class="text-center">Ingen fag tilføjet</td>
+            </tr>
+        }
+    </tbody>
+</table>

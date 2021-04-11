@@ -1,0 +1,18 @@
+﻿@model IQueryable<Subject>
+
+<table class="table table-sm table-bordered table-striped table-hover">
+    <thead>
+        <tr>
+            <th>Fag navn</th>
+            <th><a class="badge btn btn-primary" asp-action="EditSubject" />Opret ny</th>
+        </tr>
+    </thead>
+    <tbody>
+        @foreach (var student in Model) {
+            <tr>
+                <td>@student.Name</td>
+                <partial name="EditSubjectIndividual" model="student" />
+            </tr>
+        }
+    </tbody>
+</table>
